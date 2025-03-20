@@ -19,19 +19,7 @@
             height: 100%;
         }
 
-        .header {
-            text-align: center;
-            padding: 30px;
-            color: #2E3B4E;
-            font-size: 40px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border-bottom: 5px solid #4CAF50;
-            margin-bottom: 50px;
-        }
+        
 
         .container {
             width: 100%;
@@ -86,11 +74,6 @@
             transform: scale(1.03);
         }
 
-        /* Input Fields for Phone and UID */
-        input[type="tel"], input[type="text"], input[type="email"] {
-            background-color: #f9f9f9;
-        }
-
         /* Submit Button */
         button {
             width: 100%;
@@ -140,6 +123,126 @@
                 opacity: 1;
             }
         }
+        /* Global Styles for .header */
+.header {
+    text-align: center;
+    padding: 30px;
+    color: #2E3B4E;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-bottom: 5px solid #4CAF50;
+    margin-bottom: 50px;
+    width: 100%;  /* Ensures it spans the full width */
+    box-sizing: border-box;  /* Prevents overflow due to padding */
+    transition: all 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input, textarea, select {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    .header {
+        width: 115%;
+        font-size: 24px;
+        padding: 15px 10px;  /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input, textarea, select {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Extra small mobile view */
+@media (max-width: 320px) {
+    .header {
+        font-size: 20px;
+        padding: 10px 5px;  /* Reduce padding further for very small screens */
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    label {
+        font-size: 11px;
+    }
+
+    input, textarea, select {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+@media (max-width: 320px){
+    .header{
+        width: 108%;
+    }
+}
+
 
         /* Error Message Styling */
         .error {
@@ -172,85 +275,7 @@
 
         /* Media Queries for Responsiveness */
         /* Tablet view */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 28px;
-                margin-bottom: 20px;
-            }
-
-            .container {
-                width: 90%;
-                padding: 30px;
-            }
-
-            label {
-                font-size: 12px;
-            }
-
-            input, textarea, select {
-                font-size: 13px;
-                padding: 12px;
-            }
-
-            button {
-                font-size: 16px;
-                padding: 12px;
-            }
-        }
-
-        /* Mobile view */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 24px;
-                margin-bottom: 15px;
-            }
-
-            .container {
-                width: 95%;
-                padding: 25px;
-            }
-
-            label {
-                font-size: 12px;
-            }
-
-            input, textarea, select {
-                font-size: 12px;
-                padding: 10px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-
-        /* Extra small mobile view */
-        @media (max-width: 320px) {
-            h1 {
-                font-size: 20px;
-                margin-bottom: 10px;
-            }
-
-            .container {
-                width: 95%;
-                padding: 20px;
-            }
-
-            label {
-                font-size: 11px;
-            }
-
-            input, textarea, select {
-                font-size: 11px;
-                padding: 8px;
-            }
-
-            button {
-                font-size: 12px;
-                padding: 8px;
-            }
-        }
+       
 
     </style>
 </head>
@@ -296,10 +321,8 @@
                     <option value="advanced">More than 70</option>
                 </select>
             </div>
+            <button type="submit">Submit Registration</button> 
 
             <div class="form-section">
-                <label for="likes">Likes/Interests</label>
-                <textarea id="likes" name="likes" required></textarea>
-            </div>
+               
 
-            <button type="submit">Submit Registration</
